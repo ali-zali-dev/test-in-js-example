@@ -21,3 +21,11 @@ describe('Calculator Test', function(){
         assert.strictEqual(calc.mul(x,y),4)
     })
 })
+
+describe('First Item Test', function(){
+
+    it('return first item',function(){
+        
+        assert.equal(calc.firstItem([1,2,3]),1)
+    })
+})
