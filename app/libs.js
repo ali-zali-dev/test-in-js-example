@@ -14,8 +14,24 @@ const firstItem = array => {
     
 }
 
+const delayedFilterwithCallback = function(array , filter , callback) {
+    setTimeout(() => {
+        callback(array.filter(filter));
+    }, 1000);
+}
+
+const delayedFilterwithPromise = function(array , filter , callback) {
+    return new Promise((resolve , reject) => {
+        setTimeout(() => {
+            resolve(array.filter(filter));
+        }, 1000);
+    })
+}
+
 module.exports = {
     sum,
     mul,
-    firstItem
+    firstItem,
+    delayedFilterwithCallback,
+    delayedFilterwithPromise
 }
