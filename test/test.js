@@ -1,4 +1,5 @@
 const assert = require('chai').assert;
+const expect = require('chai').expect;
 const calc = require('../app/libs')
 describe('Calculator Test', function(){
     it('returns 1 + 1 = 2', function(){
@@ -12,6 +13,8 @@ describe('Calculator Test', function(){
         // assert.equal(x + y,2)
         assert.equal(calc.sum(x,y),2)
         assert.strictEqual(calc.sum(x,y),2)
+        expect(calc.sum(x,y)).to.equal(2)
+
     })
 
     it('returns 2 * 2 = 4', function(){
@@ -27,6 +30,8 @@ describe('First Item Test', function(){
     it('return first item',function(){
         
         assert.equal(calc.firstItem([1,2,3]),1)
+        expect(calc.firstItem([1,2,3])).to.equal(1)
+
     })
 })
 
